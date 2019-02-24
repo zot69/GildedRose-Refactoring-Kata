@@ -1,8 +1,7 @@
 package com.gildedrose;
 
-import static org.junit.Assert.*;
-
-import org.approvaltests.Approvals;
+import com.gildedrose.items.Item;
+import com.gildedrose.items.ItemFactory;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
 
@@ -27,7 +26,7 @@ public class GildedRoseTest {
         Item[] items = new Item[] { ItemFactory.create(name, sellIn, quality) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        return app.items[0].toString();
+        return app.getItems()[0].toString();
     }
 
 }

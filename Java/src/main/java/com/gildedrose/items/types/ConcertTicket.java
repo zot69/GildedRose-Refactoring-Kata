@@ -1,14 +1,15 @@
-package com.gildedrose.itemtypes;
+package com.gildedrose.items.types;
 
-import com.gildedrose.Item;
+import com.gildedrose.items.Item;
 
 public class ConcertTicket extends Item {
+
     public ConcertTicket(int sellIn, int quality) {
         super("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
     }
 
     @Override
-    protected void updateQuality() {
+    public void updateQuality() {
         if (quality < 50) {
             quality++;
 

@@ -1,12 +1,10 @@
-package com.gildedrose;
+package com.gildedrose.items;
 
 public class Item {
 
-    public String name;
-
-    public int sellIn;
-
-    public int quality;
+    protected String name;
+    protected int sellIn;
+    protected int quality;
 
     //Made it protected so we use the new Factory
     protected Item(String name, int sellIn, int quality) {
@@ -21,7 +19,7 @@ public class Item {
     }
 
 
-    protected void updateQuality() {
+    public void updateQuality() {
         //default treatment
 
         if(quality > 0) {

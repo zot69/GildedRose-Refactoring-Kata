@@ -1,9 +1,11 @@
 package com.gildedrose;
 
+import com.gildedrose.items.Item;
+
 import java.util.Arrays;
 
 class GildedRose {
-    Item[] items;
+    private Item[] items;
 
     public GildedRose(Item[] items) {
         this.items = items;
@@ -13,4 +15,7 @@ class GildedRose {
         Arrays.stream(items).forEach(Item::updateQuality);
     }
 
+    public Item[] getItems() {
+        return items;
+    }
 }
